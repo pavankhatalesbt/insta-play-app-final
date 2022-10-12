@@ -4,6 +4,8 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { Spin } from "antd";
+import Navbar from "../Navbar/Navbar";
+
 
 const Loginform = () => {
   const navigate = useNavigate("");
@@ -98,6 +100,7 @@ const Loginform = () => {
   };
   return (
     <>
+      <Navbar/>
       <div className={style.xx}>
         <div className={style.formcontainer}>
           <h1>Sign in</h1>
