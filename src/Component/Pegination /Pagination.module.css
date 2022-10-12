@@ -27,3 +27,22 @@ color: #ffffff;
    color: #fff263;
     text-decoration: underline;
 }
+
+
+@media only screen and (max-width: 500px) {
+
+    #prev{
+        padding-right: 7px;
+     }
+     
+     #next{
+        
+         margin-left: 0%;
+     }  
+
+.button{
+    padding: 0 5px;
+    color: #ffffff;
+    }
+
+  }

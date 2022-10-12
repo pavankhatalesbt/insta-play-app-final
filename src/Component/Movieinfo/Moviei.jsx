@@ -5,11 +5,10 @@ import play from "../../images/play.svg";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router";
 import Videoplay from "../Videoplay/Videoplay";
-import Navbar from "../Navbar/Navbar";
+import Logo from "../../images/Logo.svg";
 
 const Moviei = () => {
   const navigate = useNavigate();
-  let img_path = "https://image.tmdb.org/t/p/w500";
 
   const { id } = useParams();
 
@@ -36,10 +35,23 @@ const Moviei = () => {
   }, [movieinfo]);
 
   // console.log(movieinfo.backdrop_path)
+  const removeUser = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
 
   return (
     <>
-    <Navbar/>
+      <div className={style.container}>
+        <div className={style.imgcontainer}>
+          <img src={Logo} alt="websitelogo" />
+        </div>
+
+        <button onClick={removeUser} className={style.logout}>
+          Logout
+        </button>
+      </div>
+
       {movieinfo && (
         <div className={style.infocontainer}>
           <div className={style.sec1}>
@@ -63,12 +75,17 @@ const Moviei = () => {
             </div>
           </div>
 
-          <div
-            className={style.sec2}
-            style={{
-              backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${movieinfo.poster_path}`})`,
-            }}
-          >
+          <div className={style.sec2}>
+          <img
+              src={backbtn}
+              alt="backbtn"
+              className={style.backbtnimg}
+              onClick={backtobapage}
+            />
+
+            <div className={style.innerimgcontainer}>
+            <img src={`https://image.tmdb.org/t/p/w500${movieinfo.poster_path}`} alt="" className={StyleSheet.innerimg}/>
+            </div>
             <img
               src={play}
               alt=""
@@ -76,6 +93,7 @@ const Moviei = () => {
               onClick={() => setVideo(true)}
             />
           </div>
+          
           <div className={style.modal}>
             {video ? <Videoplay id={id} onClick={() => setVideo(false)} /> : ""}
           </div>

@@ -2,6 +2,7 @@
     width: 250px;
     height: 160px;
     background-size: contain;
+    object-fit: cover;
 }
 
 .Cards{
@@ -24,3 +25,4 @@
     display: flex;
     justify-content: space-between;
 }
+

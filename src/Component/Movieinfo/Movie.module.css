@@ -3,9 +3,22 @@
     justify-content: space-between;
     flex-wrap: wrap-reverse;
     background-color: #000000;
-    height: 568px;
 }
-
+.container{
+    background-color:#263F61;
+    padding: 12px 0 12px 54px;
+    width: 100%;  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logout{
+    margin-right: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+}
 .sec1{
     padding: 36px 56px;
     width: 35%;
@@ -32,19 +45,62 @@ cursor: pointer;
     flex-wrap: wrap;
 }
 .sec2{
-width: 65%;
-/* height: 10%; */
 background-repeat: no-repeat;
 opacity: 0.5;
 background-size: cover;
+padding: 20px 30px 40px 56px;
 }
 
 
 .play{
-position: relative;
-top: 45%;
-left: 50%;
-width: 8%;
+position: absolute;
+top: 60%;
+left: 70%;
 cursor: pointer;
 }
+.backbtnimg{
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .sec1{
+        padding: 36px 56px;
+        width: 100%;
+    
+    }
+    .backbtnimg{
+        display: block;
+      
+    }
+    .backbtn{
+         display: none;   
+    }
+    .infocontainer{
+        display: flex;
+        justify-content: space-between;
+      
+    }
+    .play{
+        position: absolute;
+        top: 100%;
+        left: 35%;
+        cursor: pointer;
+        }
+
+  }
+
+
+@media only screen and (max-width: 572px) {
+    .innerimgcontainer img{
+        width: 80%;
+    }
+    .play{
+        position: absolute;
+        top: 60%;
+        left: 42%;
+        cursor: pointer;
+        }
+
+  }
 

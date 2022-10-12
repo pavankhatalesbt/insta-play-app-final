@@ -15,3 +15,15 @@
   
 }
 
+
+@media only screen and (max-width: 500px) {
+    .maincontainer {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    }
+  
+
+  }
+

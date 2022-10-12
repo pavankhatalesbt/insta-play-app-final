@@ -34,7 +34,7 @@ export const Home = () => {
 
 
   const searchMovie = async () => {
-    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8ec065dc5c7fd191cd99ead2b741b51f&language=en-US&query=${textQuery}`)
+    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=b7f77b88848378309fc867cd549a0964&language=en-US&query=${textQuery}`)
     const searchdata = await response.data.results;
     setMovieData(searchdata);
     if (searchdata.length <= 0) {
